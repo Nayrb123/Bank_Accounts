@@ -1,0 +1,40 @@
+@using bank_accounts.Models
+@model User
+
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style>
+        h1 {
+            margin: 20px;
+        }
+        .form-group {
+            margin: 20px;
+        }
+    </style>
+
+    </head>
+<body>
+    <h1>Login</h1>
+
+<form asp-action="login" asp-controller="Home" method="POST">
+  <div class="form-group col-md-6">
+    <label asp-for="Email">Email</label>
+    <span asp-validation-for="Email"></span>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email Address" asp-for="Email" >
+  </div>
+  <div class="form-group col-md-6">
+    <label asp-for="Password">Password</label>
+    <span asp-validation-for="Password"></span>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" asp-for="Password">
+    
+    <br>
+    <button type="submit" class="btn btn-dark">Submit</button>
+    <a href="/" class="float-right">Need to Register?</a>
+  </div>
+
+</form>
+
+</body>
+
+</html>
